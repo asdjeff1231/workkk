@@ -4,10 +4,10 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void) {
-	int i;
-	for(i=1;i<11;i++)
+	int GitWork;
+	for(GitWork=1;GitWork<11;GitWork++)
 	{
-		printf("%d ",i);
+		printf("%d ",GitWork);
 	}
 	
 	
