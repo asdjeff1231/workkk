@@ -1,0 +1,28 @@
+# Project: ±M®×3
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = work123.o
+LINKOBJ  = work123.o
+LIBS     = -L"D:/C DEV/DevCppPortable/MinGW64/lib" -L"D:/C DEV/DevCppPortable/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/C DEV/DevCppPortable/MinGW64/include" -I"D:/C DEV/DevCppPortable/MinGW64/x86_64-w64-mingw32/include" -I"D:/C DEV/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/C DEV/DevCppPortable/MinGW64/include" -I"D:/C DEV/DevCppPortable/MinGW64/x86_64-w64-mingw32/include" -I"D:/C DEV/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/C DEV/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = work11.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+work123.o: work123.c
+	$(CC) -c work123.c -o work123.o $(CFLAGS)
